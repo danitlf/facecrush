@@ -20,5 +20,5 @@ def user_list(request):
         serializer = UserSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
-            return JsonResonse(serializer.data, status=201)
+            return JsonResponse(serializer.data, status=201)
         return JsonReponse(serializer.erros, status=400)
