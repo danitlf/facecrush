@@ -122,3 +122,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+APP_ID='1548485505217378'
+APP_SECRET = '9652db70e0f835ff35932d72ddb3a6c2'

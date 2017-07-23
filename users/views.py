@@ -5,11 +5,12 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from users.models import User
 from users.serializers import UserSerializer
+from friends.repositories import FriendsRepository
 
 @csrf_exempt
-def user_list(request):
-    """
-    """
+def save_user(request):
+
+    #metodo GET apenas para teste, pra testar a validade do post
     if request.method == 'GET':
         users = User.objects.all()
         serializer = UserSerializer(users, many=True)
