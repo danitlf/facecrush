@@ -25,7 +25,7 @@ SECRET_KEY = '7hg_(hsqz@vuh_0c&4_mj0#&$&wr5bo)5!orjzkfzl%55l-k%4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['facecrush.herokuapp.com']
+ALLOWED_HOSTS = ['facecrush.herokuapp.com', 'localhost']
 
 
 # Application definition
