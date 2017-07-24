@@ -9,13 +9,14 @@ class FriendsRepository(object):
         # self.graph = facebook.GraphAPI(self.access_token)
 
     def get_access_token_by_id(self):
-        user = User.objects.filter(user_id=self.user_id)
-        # import ipdb; ipdb.set_trace()
-
+        user = User.objects.get(user_id=self.user_id)
+        return user.access_token
 
     def get_all_friends(self):
-        pass
-        # friends = graph.get_object('/me/friends')['data']
+        access_token = self.get_access_token_by_id()
+        graph = facebook.GraphAPI(access_token=access_token)
+        return graph.get_object('/me/friends')['data']
+
 
 #Transforma o token padrao de curto tempo, em um token de acesso mais longo
 #O token padrao tem curta duraçao porque foi gerada por uma app web

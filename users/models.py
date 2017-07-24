@@ -5,8 +5,8 @@ from django.db import models
 
 class User(models.Model):
 	user_id = models.CharField(max_length=1000)
-	nome = models.CharField(max_length=1000)
-	token = models.CharField(max_length=1000)
+	name = models.CharField(max_length=1000)
+	access_token = models.CharField(max_length=1000)
 
-class Meta: 
+class Meta:
 	ordering = ('created',)

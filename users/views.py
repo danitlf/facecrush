@@ -22,4 +22,4 @@ def save_user(request):
         if serializer.is_valid():
             serializer.save()
             return JsonResponse(serializer.data, status=201)
-        return JsonReponse(serializer.erros, status=400)
+        return JsonResponse(serializer.erros, status=400)
