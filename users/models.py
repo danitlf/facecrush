@@ -9,7 +9,7 @@ class User(models.Model):
 	user_id = models.CharField(max_length=1000)
 	name = models.CharField(max_length=1000)
 	access_token = models.CharField(max_length=1000)
-	user_description = models.CharField(max_length=1000, default=None)
+	description = models.CharField(max_length=1000, default=None)
 	age = models.DateField(default=date.today)
 	gender = models.CharField(max_length=10, default=None)
 	show_gender = models.CharField(max_length=10, default=None)
