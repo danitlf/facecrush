@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['facecrush.herokuapp.com', 'localhost']
 INSTALLED_APPS = [
     'users',
     'friends',
+    'matchs',
 	'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',

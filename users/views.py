@@ -10,7 +10,7 @@ from friends.repositories import FriendsRepository
 @csrf_exempt
 def save_user(request):
 
-    #metodo GET apenas para teste, pra testar a validade do post
+    #metodo GET apenas para teste, pra trazer todo mundo
     if request.method == 'GET':
         users = User.objects.all()
         serializer = UserSerializer(users, many=True)
